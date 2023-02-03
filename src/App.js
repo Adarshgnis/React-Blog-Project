@@ -9,7 +9,6 @@ import Fitness from './Components/Fitness'
 import Food from './Components/Food'
 import Footer from './Components/Footer'
 import Details from './Components/Details'
-import SingleBlogPage from './Components/SingleBlogPage'
 import DetailPage from './Components/DetailPage'
 
 
@@ -28,7 +27,6 @@ const App = () => {
         <Route path='/hollywood' element={<Hollywood />} />
         <Route path='/fitness' element={<Fitness />} />
         <Route path='/food' element={<Food />} />
-        <Route path=":category/articleid" element={<SingleBlogPage />} />
             <Route path="*" element={<DetailPage/>} />
 
       </Routes>

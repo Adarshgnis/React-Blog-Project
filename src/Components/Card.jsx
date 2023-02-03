@@ -1,20 +1,17 @@
 import React from 'react'
 import './Bollywood.css'
-import { NavLink,Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 const Card = (props) => {
   const { imgUrl, title, description,techId } = props;
   return (
-    <Link to="/DetailPage">
-    <NavLink 
-        state={{
-            title: title,
-            img: imgUrl,
-            description: description,
-            id: techId,
-        }}
-        to={`${techId}`}
-    >
+    <Link to="/DetailPage"  state={{
+      title: title,
+      img: imgUrl,
+      description: description,
+      id: techId,
+  }}> 
+   
     <>
     <div className='bolly-card-dis'>
         <div className='bolly-card-1'><img width='100%' src={imgUrl} alt='Error!'/></div>
@@ -27,7 +24,7 @@ const Card = (props) => {
     </div>
     <hr/>
     </>
-    </NavLink>
+    
     </Link>
   )
 }

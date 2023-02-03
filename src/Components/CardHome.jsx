@@ -1,19 +1,16 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 const CardHome = (props) => {
     const { imgUrl, title, description, articleid, techId } = props;
     return (
-        <Link to="/DetailPage">
-    <NavLink 
-        state={{
+        <Link to="/DetailPage"    state={{
             title: title,
             img: imgUrl,
             description: description,
             id: techId,
-        }}
-        to={`${techId}`}
-    >
+        }}>
+    
             <div className={articleid}>
                 <div className="card__Home" >
                     <div className='card__image'>
@@ -26,7 +23,7 @@ const CardHome = (props) => {
                 </div>
                 <hr style={{ fontWeigth: "30px", color: "black" }} />
             </div>
-            </NavLink>
+           
             </Link>
     )
 
