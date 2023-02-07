@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
     const navigate = useNavigate();
+    const [toggle, settoggle]=useState(false)
     const homeclick=()=>{
      navigate('/')   
     }
@@ -23,7 +24,7 @@ const Header = () => {
         navigate('/food')   
        }
        const hidenav=()=>{
-    
+        settoggle(!toggle)
        }
     return (
         <div className='navbar-head'>
@@ -33,12 +34,12 @@ const Header = () => {
             </div>
            
             <div className='navbar'>
-                <span className='navbar-span' onClick={homeclick}>Home</span>
-                <span className='navbar-span' onClick={bollywoodclick}>Bollywood</span>
-                <span className='navbar-span' onClick={technologyclick}>Technology</span>
-                <span className='navbar-span' onClick={hollywoodclick}>Hollywood</span>
-                <span className='navbar-span' onClick={fitnessclick}>Fitness</span>
-                <span className='navbar-span' onClick={foodclick}>Food</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={homeclick}>Home</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={bollywoodclick}>Bollywood</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={technologyclick}>Technology</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={hollywoodclick}>Hollywood</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={fitnessclick}>Fitness</span>
+                <span className={toggle ? 'mobile-view' : 'navbar-span'} onClick={foodclick}>Food</span>
                 <span className='hide-nav-btn' onClick={hidenav}>|||</span>
             </div>
             

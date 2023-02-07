@@ -43,12 +43,23 @@
 @media only screen and (max-width:400px){
     .navbar-span{
     display: none;
+
+    /* text-align: center; */
+    /* margin: 5px; */
     }
-    .hide-nav-btn{
-        display: block;
-        margin-left: 85%;
-    }
+   
     .navbar{
         display: block;
+    }
+    .hide-nav-btn{
+       
+       display: block;
+       margin: 0% 93%;
+    }
+    .mobile-view{
+        display: block;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
     }
 }
