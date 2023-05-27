@@ -20,7 +20,7 @@ const Home = () => {
           </div>
           <div className='home-dis-2'>
             <div className='in-div-dis'>
-              <ImageCard src='https://citizenz.de/wp-content/uploads/2018/10/DarkNetflix.jpg' />
+              <ImageCard src='https://th.bing.com/th/id/R.4ce8a894b4382b49f26cc16a62cd9545?rik=RTd6oQQPjHWRcw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fct871tX.jpg&ehk=9ut5DudbIVxhGCORhypUJgkeYq7nH89xKUCWOWixn%2bU%3d&risl=&pid=ImgRaw&r=0' />
 
             </div>
             <div className='in-div-dis'>
@@ -32,7 +32,8 @@ const Home = () => {
 
         <h1 style={{ marginTop: "40px" }}>The Latest</h1>
         <hr style={{ width: "200px", thickness: "20px" }} />
-        <div className="home__left left1">
+        <div className='home__main'>
+        <div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "bollywood";
@@ -48,7 +49,7 @@ const Home = () => {
               />
             ))}
         </div>
-        <div className="home__left left1">
+        <div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "technology";
@@ -64,7 +65,7 @@ const Home = () => {
               />
             ))}
         </div>
-        <div className="home__left left1">
+        <div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "food";
@@ -80,12 +81,12 @@ const Home = () => {
               />
             ))}
         </div>
+        </div>
         <h1 style={{ marginTop: "40px", display: "inline-block" }}>
           Latest Articles
         </h1>
 
-        <h1 className="Top">Top Posts</h1>
-        <hr style={{ width: "200px", thickness: "20px" }} />
+        
 
         <div className="rightbar2">
           {data
@@ -103,32 +104,14 @@ const Home = () => {
               />
             ))}
         </div>
-        <div className="sidebar2">
-          {data
-            .filter((article) => {
-              return article.category === "mix";
-            })
-            .map((n) => (
-              <Card
-                key={n.id}
-                articleid={n.id}
-                imgUrl={n.img}
-                description={n.description.slice(0, 200)}
-                title={n.title.slice(0, 25)}
-                author={n.author}
-              />
-            ))}
-
-          <div className="advertisement">
-            <p>Advertisement</p>
-          </div>
-        </div>
+        
         <h1 style={{ marginTop: "40px", display: "inline-block" }}>
           Latest Stories
         </h1>
         <hr />
 
-        <div className="home__left">
+<div className='home__main'>
+<div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "footer1";
@@ -145,7 +128,7 @@ const Home = () => {
             ))}
         </div>
 
-        <div className="home__left">
+        <div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "footer2";
@@ -162,7 +145,7 @@ const Home = () => {
             ))}
         </div>
 
-        <div className="home__left">
+        <div className='div_width'>
           {data
             .filter((article) => {
               return article.category === "footer3";
@@ -178,6 +161,8 @@ const Home = () => {
               />
             ))}
         </div>
+</div>
+        
       </div>
 
 
